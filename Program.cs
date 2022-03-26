@@ -13,11 +13,11 @@ IHost host = Host.CreateDefaultBuilder(args)
 
         services.AddDbContext<FooDbContext>(o =>
         {
-            // correctly produces an error for the wrong connection string format
+            // when running db-update.ps1, correctly produces an error for the wrong connection string format
             // System.ArgumentException: Format of the initialization string does not conform to specification starting at index 0.
             o.UseNpgsql(connection);
 
-            // incorrectly procudes an error for the connection string being null
+            // when running db-update.ps1, incorrectly procudes an error for the connection string being null
             // System.ArgumentNullException: Value cannot be null. (Parameter 'connectionString')
             o.UseNpgsql(connection2);
         });
