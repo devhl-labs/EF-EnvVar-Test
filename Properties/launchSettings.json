@@ -1,0 +1,11 @@
+﻿{
+  "profiles": {
+    "EF_EnvVar_Test": {
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "environmentVariables": {
+        "DOTNET_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}
