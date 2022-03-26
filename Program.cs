@@ -17,8 +17,9 @@ IHost host = Host.CreateDefaultBuilder(args)
             // System.ArgumentException: Format of the initialization string does not conform to specification starting at index 0.
             o.UseNpgsql(connection);
 
-            // when running db-update.ps1, incorrectly procudes an error for the connection string being null
+            // when running db-update.ps1, incorrectly produces an error for the connection string being null
             // System.ArgumentNullException: Value cannot be null. (Parameter 'connectionString')
+            // when running in VS, the value is populated
             o.UseNpgsql(connection2);
         });
     })
